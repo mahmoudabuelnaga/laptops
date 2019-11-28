@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="container-fluide d-flex clearfix">
+        <form method="GET">
+            <div class="shop_sidebar_area" style="background-color: #f8f9fa!important; width: 90%;">
+                <div class="widget brands mb-50">
+                    <!-- Widget Title -->
+                    <div class="justify-content-center btn btn-dark" style="margin-left: 35%;">Filter</div>
+
+
+                    <div class="widget-desc" style="margin-left: 10%;">
+                    <!-- Single Form Check -->
+                        <div class="">
+                            <label class="">{%bootstrap_form filter.form %}</label>
+                        </div>
+                    </div>
+                </div>
+                {% buttons %}
+                    <button type="submit" class="btn btn-primary" style="margin-left: 25%;">Search</button>
+                {% endbuttons %}
+            </div>
+        </form>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Single Product Area -->
+                {% for laptop in product %}                  
+                <div class="card col-sm-12 col-md-6 col-lg-4 mb-50 mr-auto" style="width: 18rem;">
+                    <img src="{{ laptop.img_lap.url }}" class="card-img-top" alt="{{ laptop.name }}">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ laptop.name }}</h5>
+                    <p class="card-text">{{laptop.price}} EGP</p>
+                    <a href="{{laptop.get_absolute_url}}" class="btn btn-primary">Go for details</a>
+                    </div>
+                </div>
+                {% endfor %}
+              
+            </div>
+
+        </div>
+                  
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Pagination -->
+                <nav aria-label="navigation">
+                    {% if product.has_other_pages %}
+                        <ul class="pagination justify-content-end mt-50">
+                            {% for i in product.paginator.page_range %}
+                                {% if product.number == i %}
+                                    <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+    {% endblock content %}

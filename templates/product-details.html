@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+
+
+    <!-- ##### Main Content Wrapper Start ##### -->
+    <div class="main-content-wrapper d-flex clearfix">
+
+        <!-- Mobile Nav (max width 767px)-->
+        <div class="mobile-nav">
+            <!-- Navbar Brand -->
+            <div class="amado-navbar-brand">
+                <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+            </div>
+            <!-- Navbar Toggler -->
+            <div class="amado-navbar-toggler">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+
+        <!-- Product Details Area Start -->
+        <div class="single-product-area section-padding-100 clearfix">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <div class="single_product_thumb">
+                            <div id="product_details_slider" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="">
+                                            <img class="d-block w-100" src="{{ pro_detail.img_lap.url }}" alt="First slide">
+                                    </div>
+                                    <div id="accordion">
+                                            <div class="card">
+                                              <div class="card-header" id="headingOne">
+                                                <h5 class="mb-0">
+                                                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Brand
+                                                  </button>
+                                                </h5>
+                                              </div>
+                                          
+                                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    {{pro_detail.category}}
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="card">
+                                              <div class="card-header" id="headingTwo">
+                                                <h5 class="mb-0">
+                                                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Screen Size
+                                                  </button>
+                                                </h5>
+                                              </div>
+                                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    {{pro_detail.screen_size}}
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Color
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.color}}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingFour">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                        Processor Family
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.processor_family}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFive">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        Hard Disk Capacity
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.hard_disk_capacity}}
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingSix">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        Graphics Card Capacity
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.graphics_card_Capacity}}
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingSeven">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                        Operating System
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.operating_System}}
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingEight">
+                                                    <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                        Ram Size
+                                                    </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        {{pro_detail.ram_size}}
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                                                                
+                                          </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="single_product_desc">
+                            <!-- Product Meta Data -->
+                            <div class="product-meta-data">
+                                <div class="line"></div>
+                                <p class="product-price">${{pro_detail.price}}</p>
+                                <a>
+                                    <h6>{{pro_detail.name}}</h6>
+                                </a>
+                            </div>
+
+                            <div class="short_overview my-5">
+                                <p>{{pro_detail.content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Details Area End -->
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+    {% endblock content %}
